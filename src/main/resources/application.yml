@@ -1,0 +1,35 @@
+micronaut:
+  application:
+    name: deribitIntegration
+
+datasources:
+  default:
+    url: jdbc:mysql://0.0.0.0/deribit
+    username: root
+    password: password
+    dialect: MySQL
+
+jpa:
+  default:
+    entity-scan:
+      packages:
+        - 'com.limoneren.deribit.persistence'
+    properties:
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true
+
+deribit:
+  api:
+    url: https://test.deribit.com/api/v2
+    public:
+      endpoints:
+        status: public/status
+        get-currencies: public/get_currencies
+    private:
+      endpoints:
+        get-account-summary: private/get_account_summary
+        get-deposits: private/get_deposits
+        get-withdrawals: /private/get_withdrawals
+        withdraw: /private/withdraw
