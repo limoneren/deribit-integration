@@ -13,12 +13,12 @@ docker volume create mysql80-volume
 docker run --name mysql80 -p 3306:3306 -v mysql80-volume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:8.0
 ```
 ### Apply the Flyway Migrations
-- Run flyway migrate command to create the schema.
+- Run flyway migrate command in the project directory to create the schema.
 ```
  ./gradlew flywayMigrate 
 ```
 ### Run the Micronaut app
-- Micronaut app will run in an embedded server.
+- Micronaut app will run in an embedded server. Run the following command in the project directory.
 ```
  ./gradlew run
 ```
