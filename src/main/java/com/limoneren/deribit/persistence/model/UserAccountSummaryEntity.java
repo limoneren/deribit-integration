@@ -24,7 +24,8 @@ public class UserAccountSummaryEntity {
     @Column(name="client_id")
     private String clientId;
     private String currency;
+    @Column(precision = 20, scale = 10)
     private BigDecimal balance;
-    @Column(name="reserved_funds")
+    @Column(name="reserved_funds", precision = 20, scale = 10)
     private BigDecimal reservedFunds;
 }
