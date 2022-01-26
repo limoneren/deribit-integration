@@ -29,7 +29,7 @@ docker run --name mysql80 -p 3306:3306 -v mysql80-volume:/var/lib/mysql -e MYS
 
 ## cURL queries to check the service
 - Getting the user's current balances and reserved funds for all available
-  currencies
+  currencies. Note that initially, the database is populated with some test data coming from TestDataProvider class. This is for easier testing of db updates.
 ```
 curl --location --request GET 'http://localhost:8080/deribit/account-summary?client-id=7H4NajEy' \
 --header 'Content-Type: application/json' \
