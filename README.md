@@ -1,4 +1,8 @@
 ## Running the project
+### Clone the project
+```
+git clone git@github.com:limoneren/deribit-integration.git
+```
 ### Create the DB
 - Create a docker volume to keep the mysql data persistent.
 ```
