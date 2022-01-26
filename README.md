@@ -35,7 +35,7 @@ curl --location --request GET 'http://localhost:8080/deribit/account-summary?cli
 --header 'Content-Type: application/json' \
 --header 'client-secret: JAZa95w_8DNw-mljpoTHUUUmj0_J4b1d-fSMdpyKr_Q'
 ```
-- Getting history of withdrawals
+- Getting history of withdrawals. There is no withdrawal history currently. Because user wallets require 3 days to be approved for withdrawals.
 ```
 curl --location --request GET 'http://localhost:8080/deribit/withdrawals?client-id=7H4NajEy&currency=BTC&count=10&offset=0' \
 --header 'Content-Type: application/json' \
