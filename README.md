@@ -47,7 +47,7 @@ curl --location --request GET 'http://localhost:8080/deribit/deposits?client-id=
 --header 'Content-Type: application/json' \
 --header 'client-secret: JAZa95w_8DNw-mljpoTHUUUmj0_J4b1d-fSMdpyKr_Q'
 ```
-- Withdraw from exchange to external crypto address. (Withdraw wallet needs 3 days to be approved.)
+- Withdraw from exchange to external crypto address. Withdraw wallet needs 3 days to be approved. That's why, this request is returning with "address is not usable yet" error.
 ```
 curl --location --request GET 'http://localhost:8080/deribit/withdraw?client-id=7H4NajEy&currency=BTC&address=bcrt1qev0hc6ejmct8zdw9ycs9dljjla2dlgchgjryrq&amount=0.001&priority=high' \
 --header 'Content-Type: application/json' \
