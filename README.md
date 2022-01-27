@@ -10,7 +10,7 @@ docker volume create mysql80-volume
 ```
 - Run a container from the MySQL 8.0 image.
 ```
-docker run --name mysql80 -p 3306:3306 -v mysql80-volume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:8.0
+docker run --name mysql80 -p 3306:3306 -v mysql80-volume:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -d mysql:8.0
 ```
 ### Apply the Flyway Migrations
 - Run flyway migrate command in the project directory to create the schema.
